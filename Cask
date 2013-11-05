@@ -15,4 +15,5 @@
 (depends-on "projectile")
 (depends-on "rainbow-mode")
 (depends-on "smart-mode-line")
+(depends-on "yaml-mode")
 (depends-on "yasnippet")
