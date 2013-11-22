@@ -47,8 +47,13 @@
 
 ;; configure modeline
 (require 'smart-mode-line)
+(setq sml/override-theme nil)
+(setq sml/active-background-color "#073642")
+(setq sml/active-foreground-color "#586e75")
+(setq sml/inactive-background-color "#073642")
+(setq sml/inactive-foreground-color "#073642")
+(setq sml/theme 'respectful)
 (sml/setup)
-
 ;; fix scrolling
 (setq redisplay-dont-pause t
       scroll-margin 1
@@ -79,3 +84,15 @@
 ;; yaml mode
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+
+;; configure smex
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+
+;; configure fiplr
+(global-set-key (kbd "C-x f") 'fiplr-find-file)
+
+;; configure guide-key
+(require 'guide-key)
+(setq guide-key/guide-key-sequence '("C-c p"))
+(guide-key-mode 1) ; enable guide-key mode
