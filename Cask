@@ -14,6 +14,7 @@
 (depends-on "guide-key")
 (depends-on "highlight-indentation")
 (depends-on "magit")
+(depends-on "org-plus-contrib")
 (depends-on "pallet")
 (depends-on "project-explorer")
 (depends-on "projectile")
