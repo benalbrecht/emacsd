@@ -96,3 +96,8 @@
 (require 'guide-key)
 (setq guide-key/guide-key-sequence '("C-c p"))
 (guide-key-mode 1) ; enable guide-key mode
+
+;; zeal-at-point
+(require 'zeal-at-point)
+(global-set-key "\C-cd" 'zeal-at-point)
+
