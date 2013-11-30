@@ -7,15 +7,15 @@
 (add-to-list 'load-path "~/.emacs.d/mypkgs/smartparens")
 (add-to-list 'load-path "~/.emacs.d/mypkgs/enhanced-ruby-mode")
 
-
-(load "00common-setup.el")
-(load "01ruby.el")
-(load "02org.el")
+(load "00smarter-move-beginning-of-line.el")
+(load "10common-setup.el")
+(load "11ruby.el")
+(load "12org.el")
 (load "50smartparens.el")
 (load "51projectile.el")
 (load "52highlight-indentation.el")
-(load "99smarter-move-beginning-of-line.el")
-;;(load '02org.el')
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
