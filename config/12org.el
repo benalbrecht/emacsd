@@ -17,3 +17,6 @@
              ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
              ("\\paragraph{%s}" . "\\paragraph*{%s}")
              ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
+;; smart quotes
+(setq org-export-with-smart-quotes t)
