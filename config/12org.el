@@ -4,9 +4,10 @@
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
 
-(setq org-agenda-files (list "~/org/work.org"
-                             "~/org/uni.org" 
-                             "~/org/home.org"))
+(setq org-agenda-files (list "~/org/gtd.org"
+                             "~/org/notes.org"
+                             "~/org/someday.org"
+                             "~/org/journal.org"))
 
 (require 'ox-latex)
 (add-to-list 'org-latex-classes
