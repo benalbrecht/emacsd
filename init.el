@@ -11,6 +11,7 @@
 (load "10common-setup.el")
 (load "11ruby.el")
 (load "12org.el")
+(load "13js.el")
 (load "50smartparens.el")
 (load "51projectile.el")
 (load "52highlight-indentation.el")
