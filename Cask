@@ -1,6 +1,6 @@
-(source melpa)
 (source gnu)
 (source marmalade)
+(source melpa)
 (source org)
 
 (depends-on "ag")
