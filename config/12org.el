@@ -11,13 +11,13 @@
 
 (require 'ox-latex)
 (add-to-list 'org-latex-classes
-          '("koma-article"
-             "\\documentclass{scrartcl}"
-             ("\\section{%s}" . "\\section*{%s}")
-             ("\\subsection{%s}" . "\\subsection*{%s}")
-             ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-             ("\\paragraph{%s}" . "\\paragraph*{%s}")
-             ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+             '("koma-article"
+               "\\documentclass{scrartcl}"
+               ("\\section{%s}" . "\\section*{%s}")
+               ("\\subsection{%s}" . "\\subsection*{%s}")
+               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+               ("\\paragraph{%s}" . "\\paragraph*{%s}")
+               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
 ;; smart quotes
 (setq org-export-with-smart-quotes t)
@@ -41,24 +41,24 @@
                       (org-agenda-sorting-strategy
                        (quote ((agenda time-up priority-down tag-up))))
                       (org-deadline-warning-days 0))))))
-)
+      )
 
 (defun gtd ()
-   (interactive)
-   (find-file "~/org/gtd.org")
-)
+  (interactive)
+  (find-file "~/org/gtd.org")
+  )
 
 ;; capture
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (define-key global-map "\C-cc" 'org-capture)
 
 (setq org-capture-templates
- '(("s" "Todo with source link" entry (file+headline "~/org/notes.org" "Tasks")
-    "* TODO %^{Description} %^g\n  %?\n  %i\n  %a\n  Entered on: %U")
-   ("t" "Todo" entry (file+headline "~/org/notes.org" "Tasks")
-    "* TODO %^{Description} %^g\n  %?\n  %i\n  Entered on: %U" )
-   ("j" "Journal" entry (file+datetree "~/org/journal.org")
-    "* %?\n  Entered on %U\n  %i\n  %a")))
+      '(("s" "Todo with source link" entry (file+headline "~/org/notes.org" "Tasks")
+         "* TODO %^{Description} %^g\n  %?\n  %i\n  %a\n  Entered on: %U")
+        ("t" "Todo" entry (file+headline "~/org/notes.org" "Tasks")
+         "* TODO %^{Description} %^g\n  %?\n  %i\n  Entered on: %U" )
+        ("j" "Journal" entry (file+datetree "~/org/journal.org")
+         "* %?\n  Entered on %U\n  %i\n  %a")))
 
 (setq org-use-fast-todo-selection t)
 
