@@ -10,6 +10,7 @@
 (depends-on "color-theme-solarized")
 (depends-on "dash")
 (depends-on "enh-ruby-mode")
+(depends-on "evil")
 (depends-on "f")
 (depends-on "fiplr")
 (depends-on "flymake-cursor")
