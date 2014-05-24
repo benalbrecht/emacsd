@@ -116,3 +116,7 @@
 ;; put autosaves in backup dir
 (setq auto-save-file-name-transforms
       `((".*" ,"~/.emacs.d/backups/" t)))
+
+
+;; help-fns+
+(require 'help-fns+)
