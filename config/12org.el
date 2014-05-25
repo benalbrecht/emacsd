@@ -53,10 +53,16 @@
 (define-key global-map "\C-cc" 'org-capture)
 
 (setq org-capture-templates
-      '(("s" "Todo with source link" entry (file+headline "~/org/notes.org" "Tasks")
-         "* TODO %^{Description} %^g\n  %?\n  %i\n  %a\n  Entered on: %U")
-        ("t" "Todo" entry (file+headline "~/org/notes.org" "Tasks")
-         "* TODO %^{Description} %^g\n  %?\n  %i\n  Entered on: %U" )
+      '(("s" "Todo with source link" entry (file+headline "~/org/gtd.org" "Tasks")
+         "* TODO %^{Description}\n  %?\n  %i\n  %a\n  Entered on: %U")
+        ("d" "Todo today" entry (file+headline "~/org/gtd.org" "Tasks")
+         "* TODO %^{Description}\n  SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))\n  %?\n  %i\n  Entered on: %U")
+        ("f" "Todo tomorrow" entry (file+headline "~/org/gtd.org" "Tasks")
+         "* TODO %^{Description}\n  SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+1d\"))\n  %?\n  %i\n  Entered on: %U")
+        ("g" "Todo scheduled" entry (file+headline "~/org/gtd.org" "Tasks")
+         "* TODO %^{Description}\n  SCHEDULED: %^t\n  %?\n  %i\n  Entered on: %U" )
+        ("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
+         "* TODO %^{Description}\n  %?\n  %i\n  Entered on: %U" )
         ("j" "Journal" entry (file+datetree "~/org/journal.org")
          "* %?\n  Entered on %U\n  %i\n  %a")))
 
