@@ -7,6 +7,7 @@
 (depends-on "auto-complete")
 (depends-on "better-defaults")
 (depends-on "cask")
+(depends-on "cider")
 (depends-on "color-theme-solarized")
 (depends-on "dash")
 (depends-on "enh-ruby-mode")
